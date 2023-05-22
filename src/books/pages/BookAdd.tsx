@@ -16,7 +16,7 @@ export const BookAdd = () => {
     genre_id : '',
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e : any) => {
     e.preventDefault();
     try {
       const response = await BookCreate(newBook);
@@ -25,12 +25,13 @@ export const BookAdd = () => {
         navigate(-1);
       }
     } catch (error) {
+      setError("There is an error");
       console.error(error);
     }
 
   }
 
-  const handleChange = ({ target }) => {
+  const handleChange = ({ target } : any ) => {
     setNewBook({
       ...newBook,
       [target.name] : target.value

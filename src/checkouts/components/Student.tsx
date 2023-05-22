@@ -1,5 +1,4 @@
 import { User } from "../../interfaces/Models"
-import PropTypes, { InferProps } from 'prop-types';
 
 type Props = {
     user: User|undefined;

@@ -17,7 +17,7 @@ export const BookCard = ({ book } : Props ) => {
             <span>Title: {book.title}</span>
             <span>Author: {book.author}</span>
             <span>Year: {book.published_year}</span>
-            <span>Genere: {book.genre.name}</span>
+            <span>Genere: {book.genre?.name}</span>
         </div>
         <NavLink to={`/book/show/${book.id}`}>Show</NavLink>
     </div>

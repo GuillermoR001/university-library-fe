@@ -1,6 +1,6 @@
 import { types } from '../types/types';
 
-export const authReducer = ( state = {}, action ) => {
+export const authReducer = ( state : any = {}, action : any ) => {
 
 
     switch ( action.type ) {

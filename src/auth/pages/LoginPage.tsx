@@ -11,7 +11,7 @@ export const LoginPage = () => {
   const [error, seterror] = useState<string|null>(null);
   const navigate = useNavigate();
 
-  const onLogin = async (e) => {
+  const onLogin = async (e : any) => {
     e.preventDefault();
     if (email.trim() == '' || password.trim() == '') {
       seterror('Please enter your credentials');
