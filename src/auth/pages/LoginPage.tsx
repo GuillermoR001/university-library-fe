@@ -49,7 +49,7 @@ export const LoginPage = () => {
         <label htmlFor="password">Password:</label>
         <input
           id="password"
-          type="text"
+          type="password"
           className="base-input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
