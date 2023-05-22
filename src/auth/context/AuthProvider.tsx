@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
 
     const action = { type: types.login, payload: user }
     localStorage.setItem('user', JSON.stringify( user ) );
-    localStorage.setItem('token',  data.token );
+    localStorage.setItem('token', data.token);
     dispatch(action);
   }
 
