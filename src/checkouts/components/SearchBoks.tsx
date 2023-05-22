@@ -12,7 +12,7 @@ export const SearchBoks = () => {
     const [books, setBooks] = useState<Book[]>([]);
 
 
-    const handleChange = (event) => {
+    const handleChange = (event : any) => {
       setGenreId(event.target.value);
     }
 

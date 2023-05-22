@@ -15,7 +15,7 @@ export const UserAdd = () => {
     user_rol : UserRoles.STUDENT,
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e : any) => {
     e.preventDefault();
     try {
       const response = await UserCreate(newUser);
@@ -24,12 +24,13 @@ export const UserAdd = () => {
         navigate(-1);
       }
     } catch (error) {
+      setError('Thre is an error try again');
       console.error(error);
     }
 
   }
 
-  const handleChange = ({ target }) => {
+  const handleChange = ({ target } : any) => {
     setNewUser({
       ...newUser,
       [target.name] : target.value

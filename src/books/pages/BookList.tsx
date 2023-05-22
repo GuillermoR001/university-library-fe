@@ -55,7 +55,7 @@ export const BookList = () => {
                                     <td>{book.title}</td>
                                     <td>{book.author}</td>
                                     <td>{book.published_year}</td>
-                                    <td>{book.genre.name}</td>
+                                    <td>{book.genre?.name}</td>
                                     <td>{book.stock}</td>
                                 </tr>
                             );

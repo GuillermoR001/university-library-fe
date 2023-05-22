@@ -48,7 +48,7 @@ export const StudentCheckoutsPage = () => {
                                     <td>{checkout.book.title}</td>
                                     <td>{checkout.book.author}</td>
                                     <td>{checkout.book.published_year}</td>
-                                    <td>{checkout.book.genre.name}</td>
+                                    <td>{checkout.book.genre?.name}</td>
                                     <td><CheckoutReturnDate checkoutDate={checkout.return_date}/></td>
                                 </tr>
                             );

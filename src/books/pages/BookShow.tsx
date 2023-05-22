@@ -58,7 +58,7 @@ export const BookShow = () => {
       <div className="book-info">
           <span>Author: {book?.author}</span>
           <span>Year: {book?.published_year}</span>
-          <span>Genere: {book?.genre.name}</span>
+          <span>Genere: {book?.genre?.name}</span>
           <span>Stock: {book?.stock}</span>
       </div>
       <div className="actions">
@@ -66,7 +66,7 @@ export const BookShow = () => {
           Back
         </button>
         {
-          (user.user_rol == UserRoles.STUDENT && book?.stock > 0 ) &&
+          (user.user_rol == UserRoles.STUDENT && book?.stock != 0 ) &&
           <button className="primary-btn" onClick={ requestBook }>
             Request
           </button>

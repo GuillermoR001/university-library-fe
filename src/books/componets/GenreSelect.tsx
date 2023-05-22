@@ -4,7 +4,7 @@ import { Genre } from "../../interfaces/Models";
 
 
 
-export const GenreSelect = ({ name = "genre_id", hangleChange }) => {
+export const GenreSelect = ({ name = "genre_id", hangleChange }: any) => {
 
     const [genres, setGenres] = useState<Genre[]>([]);
 
@@ -17,7 +17,7 @@ export const GenreSelect = ({ name = "genre_id", hangleChange }) => {
             const { data } = await GenresList();
             setGenres( data );
         } catch(error) {
-            console.log(error)
+            console.error(error)
         }
     }
 

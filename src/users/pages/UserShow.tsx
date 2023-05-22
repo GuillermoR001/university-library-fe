@@ -1,15 +1,13 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { User } from '../../interfaces/Models';
 
-import { AuthContext } from '../../auth';
 import { IsLoading } from '../../shared';
 import { GetUser } from '../services/UserServices';
 
 export const UserShow = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { user } = useContext(AuthContext)
 
   const [userDetail, setUserDetail] = useState<User|null>(null);
   const [loading, setLoading] = useState(false);

@@ -9,8 +9,9 @@ import { types } from '../types/types';
 
 
 
-const init  = ()  => {
-  const user = JSON.parse( localStorage.getItem('user') );
+const init  = () : any => {
+  const userJson = localStorage.getItem('currentUser');
+  const user = userJson !== null ?  JSON.parse(userJson) : {};
   return {
     logged: !!user,
     user: user,
@@ -18,7 +19,7 @@ const init  = ()  => {
 }
 
 
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children } : any) => {
     
   const [ authState, dispatch ] = useReducer( authReducer, {}, init );
 
@@ -37,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
     const action = { type: types.login, payload: user }
     localStorage.setItem('user', JSON.stringify( user ) );
-    localStorage.setItem('token',  data.token );
+    localStorage.setItem('token', data.token);
     dispatch(action);
   }
 

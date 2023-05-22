@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { AuthContext } from '../../auth';
 import { UserRoles } from '../../types/UserRoles';
 import { Checkouts } from '../components';
