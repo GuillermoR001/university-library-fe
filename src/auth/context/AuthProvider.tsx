@@ -10,7 +10,8 @@ import { types } from '../types/types';
 
 
 const init  = () : any => {
-  const user = undefined
+  const userJson = localStorage.getItem('user');
+  const user = userJson !== null ?  JSON.parse(userJson) : undefined;
   return {
     logged: !!user,
     user: user,
